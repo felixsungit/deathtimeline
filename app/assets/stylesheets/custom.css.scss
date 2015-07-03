@@ -1,9 +1,7 @@
-//general
+/*-----------general--------*/
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-
-
 
 $darkred: #9A1408;
 $lightred: #B32B1B;
@@ -11,77 +9,72 @@ $cloud: #ecf0f1;
 $silver: #bdc3c7;
 $darkgray: #1c1d1e;
 
-ul{
-
-	list-style-type: none;
-
-
+@font-face{
+	font-family: HoeflerText;
+  src: url(../HoeflerText.ttf);
 }
 
 body {
   padding-top: 60px;
-  // overflow-y: scroll;
   background-color: #303335;
   padding:0;
 }
+
+ul{
+	list-style-type: none;
+}
+
 a {
 	text-decoration: none !important;
 	color: #c0392b;
 	&:hover{
 		color: #e67e22;
 	}
-	
-	
 }
-
-
 
 li a { 
 	cursor: pointer; 
 }
+
 .clear {
     clear: both;
 }
+.container{
+	padding-top: 60px;
+}
 
 .see{
-	padding-left: 0;
 	display: inline-block;
-	
-	height: 100%;
 	float: left;
- 	width: 94%;
-
-}
-@font-face{
-	font-family: HoeflerText;
-  src: url(../HoeflerText.ttf);
+	padding-left: 0;
+	height: 100%;
+	width: 94%;
 }
 
+#desc {
+	display: none;
+}
 
 
 
 
-
-// nav bar
+/*-------nav bar-----------*/
 
 .navbar-default{
 	border-bottom: 2px solid $darkgray;
-
 }
-
 
 #d_brand{
 	color: black;
 	font-size: 1.8em;
 }
 
-
-
-
 .navbar-header .navbar-toggle:hover .icon-bar {
     background-color: #4d4d4d;
 }
-//footer{
+
+
+/*-------footer-----------*/
 footer{
 	display:block;
 	background-color: #303335;
@@ -94,29 +87,142 @@ footer{
 	}
 
 }
+
 #felix{
 	float:right;
 }
 
-//list
+
+/*-------list-----------*/
 .container {
 	margin-top: 30px;
-	// background-color: #303335;
 	color: $cloud;
-
 }
 
+//seasons//
+.season_name{
+	font-size: 3em;
+	text-align: center;	
+	font-weight: 480;
+}
 
 .season{
-	// border: 3px solid black;
 	border-radius: 5px;
 	padding: 10px;
 	min-height: 800px;
 	background-color: #45484B;
-	// display: inline-block;
-	
 	padding-left: 0;
+}
 
+//episodes//
+.episode{
+	padding-right: 3%;
+	padding-left: 3%;
+}
+
+.episode_name {
+	border-bottom: 3px solid #bdc3c7;
+	font-size: 1.4em;
+	padding-left: 4%;
+	margin-top: 20px;
+	padding-bottom: 2.5px;
+}
+
+.wikipedia, .wikia, .imdb{
+	display: none;
+}
+
+.dropper{
+	margin:5px 4% 0 4%;
+	float: right;
+}
+
+.dropdown-toggle{
+	background-color: #303335;
+	color: $cloud;
+	width: 100%;
+}
+
+
+//deaths//
+.death{
+	padding: 10px 4%;
+}
+
+.name{
+	display: inline-block;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 1.2em;
+}
+
+.time{
+	display: inline-block;
+	margin: 0 auto;
+	margin-bottom: 8px;
+	border-radius: 20px;
+	width: 100%;
+	margin-top: 8px;
+	background-color: $silver;
+	color: #1c1d1e;
+	text-align: center;
+
+	&.dark{
+		background-color: #1c1d1e;
+		color: $cloud;
+	}
+}
+
+.show_death{
+	display: inline-block;
+	width: 100%;
+	padding: 8px;
+	border-radius: 4px;
+	margin-bottom: 8px;
+	background-color: #36393B;
+}
+
+.house{
+	display: none;
+}
+
+.importance{
+	display: inline-block;
+	border-radius: 100%;
+	width: 18px;
+	height: 18px;
+	margin: 2px;
+	background-color: $silver;
+}
+
+.levels{
+	display: inline-block;
+	float: right;
+	margin-right: 2%;
+	border: 1px solid transparent;
+	border-radius: 24px;
+	height: 24px;
+	width: 94px;
+	text-align: center;
+	
+	p{
+		display: none;
+	}
+	&:hover .importance{
+		background-color: transparent;
+		display: none;
+	}
+	&:hover{
+		border: 1px solid $silver;
+	}
+	&:hover p{
+		display: inline-block;
+		margin: 0;
+	}
+}
+
+.filled{
+	background-color: #34495e;
 }
 
 .down_arrow{
@@ -132,89 +238,13 @@ footer{
 		color: $lightred;
 		border: 2px solid $lightred;
 	}
-
-
-}
-
-.down_arrow.rotate {
+	&.rotate {
     -moz-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
-  
-	&:hover{
-		color: $darkred;
-		border: 2px solid $darkred;
 	}
-
 }
-.show_death{
-	display: inline-block;
-	width: 100%;
-	padding: 8px;
-	border-radius: 4px;
-	margin-bottom: 8px;
-	background-color: #36393B;
-	
-
-}
-
-.name{
-	display: inline-block;
-	font-weight: 300;
-	font-style: italic;
-	font-size: 1.2em;
-
-}
-
-.importance{
-	display: inline-block;
-	border-radius: 100%;
-	width: 18px;
-	height: 18px;
-	margin: 2px;
-	background-color: $silver;
-
-
-
-}
-
-.levels{
-	display: inline-block;
-	float: right;
-	margin-right: 2%;
-	border: 1px solid transparent;
-	border-radius: 24px;
-	height: 24px;
-	width: 94px;
-	text-align: center;
-	p{
-		display: none;
-	}
-	
-	&:hover .importance{
-		// border: 2px solid transparent;
-		background-color: transparent;
-		display: none;
-	}
-	&:hover{
-		
-		border: 1px solid $silver;
-	}
-	&:hover p{
-		display: inline-block;
-		margin: 0;
-	}
-
-
-}
-
-.filled{
-	background-color: #34495e;
-	// border: 2px solid #34495e;
-}
-
-
 
 .info{
 	display: none;
@@ -236,98 +266,16 @@ footer{
 		color: $cloud;
 		margin: 8px 0; 
 	}
-
-	
-
-}
-.season_name{
-	font-size: 3em;
-	// font-family: 'game_of_thronesregular';
-	text-align: center;	
-	font-weight: 480;
-}
-
-.episode{
-	padding-right: 3%;
-	padding-left: 3%;
-}
-
-.episode_name {
-		border-bottom: 3px solid #bdc3c7;
-		font-size: 1.4em;
-		padding-left: 4%;
-		margin-top: 20px;
-		padding-bottom: 2.5px;
-
-
-}
-
-.wikipedia{
-	display: none;
-}
-.wikia{
-	display: none;
-}
-.imdb{
-	display: none;
-}
-
-.dropper{
-	margin:5px 4% 0 4%;
-	float: right;
-	.btn-group{
-		// width: 100%;
-	}
-}
-.dropdown-toggle{
-
-	background-color: #303335;
-	color: $cloud;
-	width: 100%;
-}
-.dropdown-menu{
-	// width: 100%;
-}
-
-
-
-
-.death{
-	padding: 10px 4%;
-
-}
-.time{
-
-	display: inline-block;
-	margin: 0 auto;
-	margin-bottom: 8px;
-	border-radius: 20px;
-	width: 100%;
-	// padding-left: 12px;
-	margin-top: 8px;
-	background-color: $silver;
-	color: #1c1d1e;
-	text-align: center
-
-	// float: left;
-}
-
-.time.dark{
-	background-color: #1c1d1e;
-	color: $cloud;
 }
 
 #for_back{
-	// display: block;
 	display: inline-block;
 	width: 100%;
 }
 
-.house{
-	display: none;
-}
 
-//which season
+
+/*------sidebar------*/
 
 
 .dots{
@@ -337,14 +285,9 @@ footer{
 	padding: 2px;
 	margin: 5px 1% 5px 3px;
 	height:70vh;
-
-
-
-
-
 }
+
 .circle{
-	// display: inline-block;
 	border-radius: 100%;
 	width: 22px;
 	height: 22px;
@@ -362,7 +305,6 @@ footer{
 }
 
 .direction_toggle{
-	
 	margin: 0 auto;
 	position: relative;
 	height:75px;
@@ -373,13 +315,11 @@ footer{
 	top: 40%;
 	text-align:center;
 	background-color: #c0392b;
-
+	&.blue{
+		background-color: #2980b9;
+		border: 2px solid #2980b9;
+	}
 }
-.direction_toggle.blue{
-	background-color: #2980b9;
-	border: 2px solid #2980b9;
-}
-
 
 .toggle_circle{
 	position: relative;
@@ -390,22 +330,17 @@ footer{
 	background-color: $cloud;
 }
 
-
 .state{
 	position: relative;
 	margin-top: 7px;
 	font-size: 0.6em;
 }
 
-
 .season1, .season2, .season3, .season4, .season5{
-	// background-color: red;
 	padding-left: 0px;
 }
 
-#desc {
-	display: none;
-}
+/*------disclaimer------*/
 
 #spoiler{
 	position: fixed;
@@ -416,22 +351,21 @@ footer{
   top: 0; 
   left: 0; 
   color: $silver;
-  
 }
+
 #msg{
-	
 	margin: 21.5vh auto;
 	display: block;
 	text-align: center;	
+	
 	h1{
 		font-size: 4em;
 	}
 	h2{
 		font-size: 2em;
 	}
-	
-	
 }
+
 #box{
 	margin: 10vh auto;
 	width: 92%;
@@ -439,14 +373,15 @@ footer{
 	background-color: #1c1d1e;
 	color: $silver;
 	padding: 6px;
-
 }
+
 #up{
 		margin-top: 12vh; 
 		color: $silver;
 		display: inline-block;	
 		cursor: pointer;
 }
+
 #the_x{
 	
 	float: right;
@@ -455,7 +390,8 @@ footer{
 	cursor: pointer;
 }
 
-//post season report
+/*-------post season report--------*/
+
 .post_season{
 	display: inline-block;
 	margin: 20px 2%;
@@ -490,7 +426,7 @@ footer{
 	color: #2980b9;
 }
 
-// contact
+/*-------contact---------*/
 #contact{
 	text-align: center;
 	h1{
@@ -498,28 +434,28 @@ footer{
 		font-size: 3em;
 	}
 }
+
 .fa-envelope-o{
 	margin-top: 20px;
 	display: block;
 	width: 100%;
 	margin-bottom: 20px;
 }
+
 #email{
-	// display: block;
 	font-size: 1.8em;
 	color: $cloud;
 	
 	&:hover{
 		color: #c0392b;
 	}
-
 }
 
-//about
+/*--------about----------*/
 #rails_div{
 	display: block;
-	
 }
+
 #rails_logo{
 	display: inline-block;
 	float: right;
@@ -533,14 +469,11 @@ footer{
 	display:inline-block;
 }
 
-
-#other{
-	
+#other{	
 	display:inline-block;
-	
 }
-#made{
-	
+
+#made{	
 	display: block;
 	width: 100%;
 	margin: 0;

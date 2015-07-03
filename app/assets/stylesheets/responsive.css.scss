@@ -6,20 +6,24 @@ $silver: #bdc3c7;
 $darkgray: #1c1d1e;
 
 @media screen and (min-width: 768px){
+	
 	.see{
 		width: 96%;
 	}
+	/*-------death-------*/
 	.time{
 		width: 60px;
 		margin-bottom: 0;
 		margin-left: 0;
 		margin-right: 0;		
 	}
+
 	.show_death{
 		width: 85%;
 		float: right;
 
 	}
+
 	.house{
 		display: inline-block;
 		float: right;
@@ -28,7 +32,6 @@ $darkgray: #1c1d1e;
 		border-radius: 5px;
 		margin-right: 5%;
 		padding: 0 4px;
-
 	}
 
 	.Stark{
@@ -42,10 +45,12 @@ $darkgray: #1c1d1e;
 		color: #1A1813;
 		background-color: #fcaa00;
 	}
+
 	.levels{
 		width: 108px;
 		margin-right: 5%;
 	}
+
 	.importance{
 		width: 22px;
 		height: 22px;
@@ -58,27 +63,27 @@ $darkgray: #1c1d1e;
 	.see{
 		width: 97%;
 	}
+
+	/*-------death-------*/
 	.show_death{
 		width: 90%;
 		float: right;
-
 	}
+
 	.time{
 		width: 60px;
 		margin-bottom: 0;
 		margin-left: 0;
-		margin-right: 0;
-
-		
+		margin-right: 0;		
 	}
+
 	.info{
 		float: right;
 		width: 90%;
 	}
-	.dots{
-		width: 3%;
-	}
+
 	
+	/*-------episode-------*/
 	.imdb{
 		font-size: 0.75em;
 		display: inline-block;
@@ -86,20 +91,14 @@ $darkgray: #1c1d1e;
 		border: 1px solid $silver;
 		border-radius: 3px;
 		color: $cloud;
-
-		// margin: 0 0 6px 2.5%;
 		padding:  1.5px 3px 2px 3px;
-
-
 		float: right;
 		margin: 0 6px 6px 0;
-
 
 		&:hover{
 				color: #f1c40f;
 				border: 1px solid #f1c40f;
 		}
-
 	}
 
 	.wikia{
@@ -109,19 +108,17 @@ $darkgray: #1c1d1e;
 		border-radius: 3px;
 		color: $cloud;
 		font-weight: bold;
-
-		// margin: 0 0 6px 4px;
 		padding:  2.5px 3px 0px 3px;
-		
 		margin: 0 6px 6px 0;
-
 		float: right;
+
 		&:hover{
 				color: #2980b9;
 				border: 1px solid #2980b9;
 		}
 
 	}
+
 	.wikipedia{
 		font-family: HoeflerText;
 		font-size: 0.8em;
@@ -129,21 +126,23 @@ $darkgray: #1c1d1e;
 		border: 1px solid $silver;
 		border-radius: 3px;
 		color: $cloud;
-
-		// margin: 0 0 6px 4px;
 		padding:  2px 3px 1px 3px;
-
 		float: right;
 		margin: 0 4% 6px 0;
 
-		
 		&:hover{
 				color: #95a5a6;
 				border: 1px solid #95a5a6;
 		}
 	}
+
 	.dropper{
 		display: none;
+	}
+
+	/*------sidebar--------*/
+	.dots{
+		width: 3%;
 	}
 
 }

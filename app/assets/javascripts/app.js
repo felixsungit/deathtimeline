@@ -20,6 +20,22 @@ console.log(s_3_height);
 console.log(s_4_height);
 console.log(s_5_height);
 
+$( window ).resize(function() {
+  if (a_or_d == true){
+    s_1_height = $("#asc").children(".season1").outerHeight() + 14;
+    s_2_height = $("#asc").children(".season2").outerHeight() + 14;
+    s_3_height = $("#asc").children(".season3").outerHeight() + 14;
+    s_4_height = $("#asc").children(".season4").outerHeight() + 14;
+    s_5_height = $("#asc").children(".season5").outerHeight() + 14;
+  }else{
+    s_1_height = $("#desc").children(".season5").outerHeight() + 14;
+    s_2_height = $("#desc").children(".season4").outerHeight() + 14;
+    s_3_height = $("#desc").children(".season3").outerHeight() + 14;
+    s_4_height = $("#desc").children(".season2").outerHeight() + 14;
+    s_5_height = $("#desc").children(".season1").outerHeight() + 14;
+  }
+});
+
 $(".state2").hide();
 $(".info").hide();
 $("#asc").show();
@@ -57,8 +73,6 @@ $(".down_arrow").click(function(event)
     }
     
 
-    // $(this).parent().siblings('.time').css("background-color", "#2c3e50");
-    // $(this).parent().siblings('.time').css("color", "#ecf0f1");
 });
 
 $(".toggle_circle").click(function(event){
@@ -134,11 +148,6 @@ $(".toggle_circle").click(function(event){
       console.log(s_5_height);
       
     }
-    
-
-
-
-     
 
 });
 
