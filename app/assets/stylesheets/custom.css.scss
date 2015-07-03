@@ -1,0 +1,549 @@
+//general
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+
+
+$darkred: #9A1408;
+$lightred: #B32B1B;
+$cloud: #ecf0f1;
+$silver: #bdc3c7;
+$darkgray: #1c1d1e;
+
+ul{
+
+	list-style-type: none;
+
+
+}
+
+body {
+  padding-top: 60px;
+  // overflow-y: scroll;
+  background-color: #303335;
+  padding:0;
+}
+a {
+	text-decoration: none !important;
+	color: #c0392b;
+	&:hover{
+		color: #e67e22;
+	}
+	
+	
+}
+
+
+
+li a { 
+	cursor: pointer; 
+}
+.clear {
+    clear: both;
+}
+
+.see{
+	padding-left: 0;
+	display: inline-block;
+	
+	height: 100%;
+	float: left;
+ 	width: 94%;
+
+}
+@font-face{
+	font-family: HoeflerText;
+  src: url(../HoeflerText.ttf);
+}
+
+
+
+
+
+
+// nav bar
+
+.navbar-default{
+	border-bottom: 2px solid $darkgray;
+
+}
+
+
+#d_brand{
+	color: black;
+	font-size: 1.8em;
+}
+
+
+
+
+.navbar-header .navbar-toggle:hover .icon-bar {
+    background-color: #4d4d4d;
+}
+//footer{
+footer{
+	display:block;
+	background-color: #303335;
+	border-top: 2px solid $silver;
+	margin: 20px 0 0 0;
+	padding: 0 3% 0 3%;
+	p{
+		font-size: 1.1em;
+		display: inline-block;
+	}
+
+}
+#felix{
+	float:right;
+}
+
+//list
+.container {
+	margin-top: 30px;
+	// background-color: #303335;
+	color: $cloud;
+
+}
+
+
+.season{
+	// border: 3px solid black;
+	border-radius: 5px;
+	padding: 10px;
+	min-height: 800px;
+	background-color: #45484B;
+	// display: inline-block;
+	
+	padding-left: 0;
+
+}
+
+.down_arrow{
+	display: inline-block;
+	padding: 0px 5.5px;
+	border: 2px solid $silver;
+	color: $silver;
+	border-radius: 100%;
+	float: right;
+	margin-top:0px;
+	cursor: pointer; 
+	&:hover{
+		color: $lightred;
+		border: 2px solid $lightred;
+	}
+
+
+}
+
+.down_arrow.rotate {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+  
+	&:hover{
+		color: $darkred;
+		border: 2px solid $darkred;
+	}
+
+}
+.show_death{
+	display: inline-block;
+	width: 100%;
+	padding: 8px;
+	border-radius: 4px;
+	margin-bottom: 8px;
+	background-color: #36393B;
+	
+
+}
+
+.name{
+	display: inline-block;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 1.2em;
+
+}
+
+.importance{
+	display: inline-block;
+	border-radius: 100%;
+	width: 18px;
+	height: 18px;
+	margin: 2px;
+	background-color: $silver;
+
+
+
+}
+
+.levels{
+	display: inline-block;
+	float: right;
+	margin-right: 2%;
+	border: 1px solid transparent;
+	border-radius: 24px;
+	height: 24px;
+	width: 94px;
+	text-align: center;
+	p{
+		display: none;
+	}
+	
+	&:hover .importance{
+		// border: 2px solid transparent;
+		background-color: transparent;
+		display: none;
+	}
+	&:hover{
+		
+		border: 1px solid $silver;
+	}
+	&:hover p{
+		display: inline-block;
+		margin: 0;
+	}
+
+
+}
+
+.filled{
+	background-color: #34495e;
+	// border: 2px solid #34495e;
+}
+
+
+
+.info{
+	display: none;
+	position: relative; 
+	width: 100%;
+	background-color: #36393B;
+	border-radius: 10px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding: 8px 8px 22px 4%;
+	color: $silver;
+	font-size: 1.2em;
+	ul{
+		padding-left: 0;
+	}
+	p{
+		display: inline-block;
+		font-weight: bold;
+		color: $cloud;
+		margin: 8px 0; 
+	}
+
+	
+
+}
+.season_name{
+	font-size: 3em;
+	// font-family: 'game_of_thronesregular';
+	text-align: center;	
+	font-weight: 480;
+}
+
+.episode{
+	padding-right: 3%;
+	padding-left: 3%;
+}
+
+.episode_name {
+		border-bottom: 3px solid #bdc3c7;
+		font-size: 1.4em;
+		padding-left: 4%;
+		margin-top: 20px;
+		padding-bottom: 2.5px;
+
+
+}
+
+.wikipedia{
+	display: none;
+}
+.wikia{
+	display: none;
+}
+.imdb{
+	display: none;
+}
+
+.dropper{
+	margin:5px 4% 0 4%;
+	float: right;
+	.btn-group{
+		// width: 100%;
+	}
+}
+.dropdown-toggle{
+
+	background-color: #303335;
+	color: $cloud;
+	width: 100%;
+}
+.dropdown-menu{
+	// width: 100%;
+}
+
+
+
+
+.death{
+	padding: 10px 4%;
+
+}
+.time{
+
+	display: inline-block;
+	margin: 0 auto;
+	margin-bottom: 8px;
+	border-radius: 20px;
+	width: 100%;
+	// padding-left: 12px;
+	margin-top: 8px;
+	background-color: $silver;
+	color: #1c1d1e;
+	text-align: center
+
+	// float: left;
+}
+
+.time.dark{
+	background-color: #1c1d1e;
+	color: $cloud;
+}
+
+#for_back{
+	// display: block;
+	display: inline-block;
+	width: 100%;
+}
+
+.house{
+	display: none;
+}
+
+//which season
+
+
+.dots{
+	display: inline-block;
+	position: fixed;
+	width: 3%;
+	padding: 2px;
+	margin: 5px 1% 5px 3px;
+	height:70vh;
+
+
+
+
+
+}
+.circle{
+	// display: inline-block;
+	border-radius: 100%;
+	width: 22px;
+	height: 22px;
+	margin: 0 auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	top: 50%;
+	position:relative;
+	cursor: pointer;
+	background-color: $silver;
+}
+
+.one{
+	background-color: #c0392b;
+}
+
+.direction_toggle{
+	
+	margin: 0 auto;
+	position: relative;
+	height:75px;
+	width: 26px;
+	border-radius: 24px;
+	border: 2px solid #c0392b;
+	margin: 0 auto;
+	top: 40%;
+	text-align:center;
+	background-color: #c0392b;
+
+}
+.direction_toggle.blue{
+	background-color: #2980b9;
+	border: 2px solid #2980b9;
+}
+
+
+.toggle_circle{
+	position: relative;
+	border-radius: 100%;
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+	background-color: $cloud;
+}
+
+
+.state{
+	position: relative;
+	margin-top: 7px;
+	font-size: 0.6em;
+}
+
+
+.season1, .season2, .season3, .season4, .season5{
+	// background-color: red;
+	padding-left: 0px;
+}
+
+#desc {
+	display: none;
+}
+
+#spoiler{
+	position: fixed;
+	width: 100%;
+  height: 100%; 
+  z-index: 10;
+  background-color: rgba(28,29,30,0.86);
+  top: 0; 
+  left: 0; 
+  color: $silver;
+  
+}
+#msg{
+	
+	margin: 21.5vh auto;
+	display: block;
+	text-align: center;	
+	h1{
+		font-size: 4em;
+	}
+	h2{
+		font-size: 2em;
+	}
+	
+	
+}
+#box{
+	margin: 10vh auto;
+	width: 92%;
+	display: block;
+	background-color: #1c1d1e;
+	color: $silver;
+	padding: 6px;
+
+}
+#up{
+		margin-top: 12vh; 
+		color: $silver;
+		display: inline-block;	
+		cursor: pointer;
+}
+#the_x{
+	
+	float: right;
+	display: inline-block;
+	color: $silver;
+	cursor: pointer;
+}
+
+//post season report
+.post_season{
+	display: inline-block;
+	margin: 20px 2%;
+	width: 96%;
+	border-top: 2px solid $silver;
+	padding: 0 3% 20px 3%;
+	h2{
+		display: block;
+		color: $cloud;
+		margin-top: 0;
+		border-bottom: 2px solid $silver;
+		padding: 10px 3%;
+	}
+	p{
+		display: inline-block;
+		margin-top: 5px;
+		margin-bottom:5px;
+
+	}
+	i{
+		margin-top: 10px; 
+	}
+}
+
+.minor{
+	color: #95a5a6;
+}
+.supporting{
+	color: #27ae60;
+}
+.main{
+	color: #2980b9;
+}
+
+// contact
+#contact{
+	text-align: center;
+	h1{
+		margin-top: 80px;
+		font-size: 3em;
+	}
+}
+.fa-envelope-o{
+	margin-top: 20px;
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+}
+#email{
+	// display: block;
+	font-size: 1.8em;
+	color: $cloud;
+	
+	&:hover{
+		color: #c0392b;
+	}
+
+}
+
+//about
+#rails_div{
+	display: block;
+	
+}
+#rails_logo{
+	display: inline-block;
+	float: right;
+	margin-top: 80px;
+	width: 60px;
+	margin-right: 10px;
+}
+
+#fan{
+	margin-top: 50px;
+	display:inline-block;
+}
+
+
+#other{
+	
+	display:inline-block;
+	
+}
+#made{
+	
+	display: block;
+	width: 100%;
+	margin: 0;
+}
+
+

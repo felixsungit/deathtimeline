@@ -1,0 +1,193 @@
+<ul class="see" id="asc">
+	<% @gotseasons.each do |gotseason| %>
+		<ul class ="<%= gotseason.name %>">
+			<li class="season_name ">
+				Season <%= gotseason.number %>
+			</li>
+			<li class="season ">
+				<!-- <div class="line"></div> -->
+
+				<ul class="episode"> 
+					<% gotseason.got_episode.each do |episode| %>
+						<li class="episode_name"> 
+							Episode <%= episode.number %>: <%= episode.name %> 
+							<!-- <p class="imdb">IMDb</p> -->
+							<%= link_to "WikipediA", episode.wiki,  class: "wikipedia" %>
+							<%= link_to "wikia", episode.wikia,  class: "wikia" %>
+							<%= link_to "IMDb", episode.imdb,  class: "imdb" %>
+							
+
+
+						</li>
+
+						
+						<li>
+							<ul class="death">
+								<% if episode.death.count != 0 %>
+									<% episode.death.each do |death| %>
+									 <li>
+											<div class="time">
+												<%= death.time %>
+											</div>
+
+											
+											<div class="show_death">
+												<div class="name">
+													<%= death.name %>
+												</div>
+
+												
+												<div class="down_arrow">V</div>
+												
+										<!-- 		<div class="clear"></div> -->
+												
+												<div class="levels">
+												
+													<% if death.importance == 1%>
+														<p>Minor</p>
+														<div class="importance filled"></div>
+														<div class="importance minor"></div>
+														<div class="importance minor"></div>
+													<% elsif  death.importance == 2%>
+														<p>Supporting</p>
+														<div class="importance filled"></div>
+														<div class="importance filled"></div>
+														<div class="importance minor"></div>
+													<% else %>
+														<p>Main</p>
+														<div class="importance filled"></div>
+														<div class="importance filled"></div>
+														<div class="importance filled"></div>
+													<% end %>
+												</div>
+
+												<% if death.house != nil %>
+													<div class="house <%= death.house %>">
+														<%= death.house %>
+													</div>
+												<% end %>
+
+
+											</div>
+											<div class="clear"></div>
+
+
+											<div class="info">
+												<ul>
+													<li> 
+														<p>Name : </p>
+														<%=death.name%>
+													</li>
+													<li> 
+														<p>Gender : </p>
+														<%=death.gender%>
+													</li> 
+													<li> 
+														<% if death.house != nil %>
+															<p>House : </p>
+															<%=death.house%>
+														<% end %>
+													</li> 
+													<li> 
+														<p>Time of Death : </p>
+														<%= death.time%>
+													</li>
+													<li> 
+														<p>Importance : </p>
+														<% if death.importance == 1%>
+															<%= "Minor Character" %>
+													
+														<% elsif  death.importance == 2%>
+															<%= "Supporting Character" %>
+															
+														<% else %>
+															<%= "Main Character" %>
+															
+														<% end %>
+													</li>
+													<li> 
+														<p>Killed by : </p>
+														<%= death.killed_by%>
+													</li>
+													
+													<li>
+														<%= link_to "More Info", death.link, :target => "_blank" %>
+													</li>
+												</ul>
+												
+											</div>
+											
+											<div class="clear"></div>
+
+										</li>
+									<% end %>
+								
+								<% else %>
+
+									<li>
+										<div class="time">
+											<%= " -- : -- " %>
+										</div>
+
+											
+										<div class="show_death">
+											<div class="name">
+												<%= "No notable deaths this episode" %>
+											</div>
+											<!-- <div class="down_arrow">V</div> -->
+										</div>
+										
+										<div class="clear"></div>
+
+									</li>
+
+
+								<% end %>
+
+							</ul>
+						</li> <!-- episode_name -->
+						<li class="dropper">
+							<div class="btn-group">
+							  <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Episode Links <span class="caret"></span>
+							  </button>
+							  <ul class="dropdown-menu">
+							    <li><%= link_to "WikipediA", episode.wiki%></li>
+									<li><%= link_to "wikia", episode.wikia%></li>
+									<li><%= link_to "IMDb", episode.imdb%></li>
+							  </ul>
+							</div>
+						</li>
+						<div class="clear"></div>
+
+					<% end %><!--episode loop -->
+				</ul><!--episode -->
+				<div class="post_season">
+					<h2>Post Season Report</h2>
+					<div>					
+						<p> total deaths: <%= death_count(gotseason.number)[0] %> | </p>
+						<p class="minor">	
+							minor: <%= death_count(gotseason.number)[1] %> | 
+						</p>
+						<p class="supporting">	
+							supporting: <%= death_count(gotseason.number)[2] %> | 
+						</p>
+						<p class="main">	
+							main: <%= death_count(gotseason.number)[3] %> 
+						</p>
+					</div>
+					<% for num in 0...death_count(gotseason.number)[1] %>
+						<i class="fa fa-male fa-3x minor"></i>
+					<% end %>
+					<% for num in 0...death_count(gotseason.number)[2] %>
+						<i class="fa fa-male fa-3x supporting"></i>
+					<% end %>
+					<% for num in 0...death_count(gotseason.number)[3] %>
+						<i class="fa fa-male fa-3x main"></i>
+					<% end %>
+				</div><!--post_season-->
+			</li><!--season-->
+
+		</ul>
+	<% end %>
+</ul>

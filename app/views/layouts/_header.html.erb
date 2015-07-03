@@ -1,0 +1,26 @@
+<nav class="navbar navbar-fixed-top navbar-default">
+	<div class="container-fluid">
+  	<div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to "Death Timeline", root_path, class:"navbar-brand", id:"d_brand" %>
+    	
+    </div>
+
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right" id="got_nav">
+	        
+	        <li><%=link_to "About", about_path%></li>
+	        <li><%=link_to "Contact", contact_path%></li>
+          <li><a href="http://www.hbo.com/game-of-thrones" target="blank">Game of Thrones</a></li>
+	        
+	      </ul>
+	   </div><!-- /.navbar-collapse -->
+
+
+	</div>
+</nav>
