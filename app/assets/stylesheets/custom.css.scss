@@ -283,8 +283,10 @@ footer{
 	position: fixed;
 	width: 3%;
 	padding: 2px;
-	margin: 5px 1% 5px 3px;
-	height:70vh;
+	margin: 0 1% 5px 3px;
+	top: 58%;
+	bottom: auto;
+	transform: translateY(-58%);
 }
 
 .circle{
@@ -294,7 +296,7 @@ footer{
 	margin: 0 auto;
 	margin-top: 15px;
 	margin-bottom: 15px;
-	top: 50%;
+	// top: 50%;
 	position:relative;
 	cursor: pointer;
 	background-color: $silver;
@@ -312,7 +314,7 @@ footer{
 	border-radius: 24px;
 	border: 2px solid #c0392b;
 	margin: 0 auto;
-	top: 40%;
+	// top: 40%;
 	text-align:center;
 	background-color: #c0392b;
 	&.blue{
