@@ -56,6 +56,17 @@ $darkgray: #1c1d1e;
 		height: 22px;
 		margin: 0 5px;
 	}
+	.circle{
+		&:hover{
+			width: 13px;
+			border-radius: 7px;
+
+		}
+		&:hover .show_num{
+			display: block;
+
+		}
+	}
 
 
 }
@@ -142,8 +153,17 @@ $darkgray: #1c1d1e;
 	}
 
 	/*------sidebar--------*/
-	.dots{
-		width: 3%;
+	
+
+	.circle{
+		height: 40px;
+		width: 14px;
+		border-radius: 7px;
+		&:hover{
+			width: 16px;
+			border-radius: 10px;
+
+		}
 	}
 
 }

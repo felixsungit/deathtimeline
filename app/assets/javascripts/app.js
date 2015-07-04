@@ -75,7 +75,7 @@ $(".down_arrow").click(function(event)
 
 });
 
-$(".toggle_circle").click(function(event){
+$(".direction_toggle").click(function(event){
     window.scrollTo(0, 0);
     // event.preventDefault();
     $("#asc").slideToggle(600);
@@ -90,18 +90,18 @@ $(".toggle_circle").click(function(event){
     if (a_or_d == true){
       //animations
       $(".toggle_circle").animate({
-          bottom: '-=49'
+          bottom: '-=32'
       }, 500);
 
       a_or_d = false;
-      $(".state1").hide();
-      setTimeout(function() {
-        $(".state2").animate({
-            bottom: '+=26'
-        }, 0);
+      // $(".state1").hide();
+      // setTimeout(function() {
+      //   $(".state2").animate({
+      //       bottom: '+=19'
+      //   }, 0);
 
-        $(".state2").show();
-      }, 501);
+      //   $(".state2").show();
+      // }, 501);
       //logic
 
       s_1_height = $("#desc").children(".season5").outerHeight();
@@ -120,19 +120,19 @@ $(".toggle_circle").click(function(event){
     else{
       //animations
       $(".toggle_circle").animate({
-          bottom: '+=49'
+          bottom: '+=32'
       }, 500);
       a_or_d = true;
 
       
-      setTimeout(function() {
-        $(".state1").show();
-      }, 501);
+      // setTimeout(function() {
+      //   $(".state1").show();
+      // }, 501);
 
-      $(".state2").hide();
-      $(".state2").animate({
-          bottom: '-=26'
-      }, 0); 
+      // $(".state2").hide();
+      // $(".state2").animate({
+      //     bottom: '-=20'
+      // }, 0); 
 
       // //logic
       s_1_height = $("#asc").children(".season1").outerHeight();
@@ -157,42 +157,42 @@ $(window).scroll(function(event) {
     var scroll = $(window).scrollTop();
     if (scroll < s_1_height){
 
-      $(".one").css("background-color", "#9A1408")
-      $(".two").css("background-color", "#bdc3c7")
-      $(".three").css("background-color", "#bdc3c7")
-      $(".four").css("background-color", "#bdc3c7")
-      $(".five").css("background-color", "#bdc3c7")
+      $(".one").css("background-color", "#bdc3c7");
+      $(".two").css("background-color", "transparent");
+      $(".three").css("background-color", "transparent");
+      $(".four").css("background-color", "transparent");
+      $(".five").css("background-color", "transparent");
     }
     else if (scroll >= s_1_height && scroll < s_1_height + s_2_height){
-      $(".one").css("background-color", "#bdc3c7")
-      $(".two").css("background-color", "#9A1408")
-      $(".three").css("background-color", "#bdc3c7")
-      $(".four").css("background-color", "#bdc3c7")
-      $(".five").css("background-color", "#bdc3c7")
+      $(".one").css("background-color", "transparent");
+      $(".two").css("background-color", "#bdc3c7");
+      $(".three").css("background-color", "transparent");
+      $(".four").css("background-color", "transparent");
+      $(".five").css("background-color", "transparent");
 
     }
     else if (scroll >= s_1_height + s_2_height && scroll < s_1_height + s_2_height + s_3_height){
-      $(".one").css("background-color", "#bdc3c7")
-      $(".two").css("background-color", "#bdc3c7")
-      $(".three").css("background-color", "#9A1408")
-      $(".four").css("background-color", "#bdc3c7")
-      $(".five").css("background-color", "#bdc3c7")
+      $(".one").css("background-color", "transparent");
+      $(".two").css("background-color", "transparent");
+      $(".three").css("background-color", "#bdc3c7");
+      $(".four").css("background-color", "transparent");
+      $(".five").css("background-color", "transparent");
 
     }
     else if (scroll >= s_1_height + s_2_height + s_3_height && scroll < s_1_height + s_2_height + s_3_height + s_4_height){
-      $(".one").css("background-color", "#bdc3c7")
-      $(".two").css("background-color", "#bdc3c7")
-      $(".three").css("background-color", "#bdc3c7")
-      $(".four").css("background-color", "#9A1408")
-      $(".five").css("background-color", "#bdc3c7")
+      $(".one").css("background-color", "transparent");
+      $(".two").css("background-color", "transparent");
+      $(".three").css("background-color", "transparent");
+      $(".four").css("background-color", "#bdc3c7");
+      $(".five").css("background-color", "transparent");
 
     }
     else{
-      $(".one").css("background-color", "#bdc3c7")
-      $(".two").css("background-color", "#bdc3c7")
-      $(".three").css("background-color", "#bdc3c7")
-      $(".four").css("background-color", "#bdc3c7")
-      $(".five").css("background-color", "#9A1408")
+      $(".one").css("background-color", "transparent");
+      $(".two").css("background-color", "transparent");
+      $(".three").css("background-color", "transparent");
+      $(".four").css("background-color", "transparent");
+      $(".five").css("background-color", "#bdc3c7");
     }
 });
 
