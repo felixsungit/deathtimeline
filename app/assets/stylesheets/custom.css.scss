@@ -18,6 +18,7 @@ body {
   padding-top: 60px;
   background-color: #303335;
   padding:0;
+  width: 100%;
 }
 
 ul{
@@ -40,15 +41,18 @@ li a {
     clear: both;
 }
 .container{
+	margin-top: 0;
 	padding-top: 60px;
 }
 
 .see{
 	display: inline-block;
-	float: left;
+	// float: left;
+	color: $cloud;
 	padding-left: 0;
 	height: 100%;
-	width: 94%;
+	// width: 94%;
+	width: 100%;
 }
 
 #desc {
@@ -95,7 +99,6 @@ footer{
 
 /*-------list-----------*/
 .container {
-	margin-top: 30px;
 	color: $cloud;
 }
 
@@ -107,10 +110,10 @@ footer{
 }
 
 .season{
-	border-radius: 5px;
+	// border-radius: 5px;
 	padding: 10px;
 	min-height: 800px;
-	background-color: #45484B;
+	// background-color: #45484B;
 	padding-left: 0;
 }
 
@@ -222,7 +225,8 @@ footer{
 }
 
 .filled{
-	background-color: #34495e;
+	// background-color: #34495e;
+	background-color: #2980b9;
 }
 
 .down_arrow{
@@ -279,9 +283,9 @@ footer{
 
 
 .dots{
-	display: inline-block;
+	// display: inline-block;
 	position: fixed;
-	width: 3%;
+	// width: 3%;
 	padding: 2px;
 	margin: 0 1% 5px 3px;
 	top: 58%;
@@ -338,9 +342,9 @@ footer{
 	font-size: 0.6em;
 }
 
-.season1, .season2, .season3, .season4, .season5{
-	padding-left: 0px;
-}
+// .season1, .season2, .season3, .season4, .season5{
+// 	padding-left: 0px;
+// }
 
 /*------disclaimer------*/
 
@@ -481,4 +485,24 @@ footer{
 	margin: 0;
 }
 
+/////////////////
+.season_list{
+	padding-left: 0px;
+}
+.season1, .season3, .season5{
+	
+	background-color: #45484B; 
+	margin-bottom: 0;
+}
 
+.season2, .season4{
+	.show_death, .info{
+		background-color: #45484B;;
+	}
+	
+}
+
+
+#fill{
+	width: 100%;
+}
