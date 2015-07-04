@@ -167,7 +167,7 @@
 						</ul><!--episode -->
 						<div class="post_season">
 							<h2>Post Season Report</h2>
-							<div>					
+							<div class="report">					
 								<p> total deaths: <%= death_count(gotseason.number)[0] %> | </p>
 								<p class="minor">	
 									minor: <%= death_count(gotseason.number)[1] %> | 
@@ -179,15 +179,17 @@
 									main: <%= death_count(gotseason.number)[3] %> 
 								</p>
 							</div>
-							<% for num in 0...death_count(gotseason.number)[1] %>
-								<i class="fa fa-male fa-3x minor"></i>
-							<% end %>
-							<% for num in 0...death_count(gotseason.number)[2] %>
-								<i class="fa fa-male fa-3x supporting"></i>
-							<% end %>
-							<% for num in 0...death_count(gotseason.number)[3] %>
-								<i class="fa fa-male fa-3x main"></i>
-							<% end %>
+							<div class="infograph">
+								<% for num in 0...death_count(gotseason.number)[1] %>
+									<i class="fa fa-male fa-3x minor"></i>
+								<% end %>
+								<% for num in 0...death_count(gotseason.number)[2] %>
+									<i class="fa fa-male fa-3x supporting"></i>
+								<% end %>
+								<% for num in 0...death_count(gotseason.number)[3] %>
+									<i class="fa fa-male fa-3x main"></i>
+								<% end %>
+							</div>
 						</div><!--post_season-->
 					</li><!--season-->
 

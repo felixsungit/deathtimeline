@@ -111,10 +111,10 @@ footer{
 
 .season{
 	// border-radius: 5px;
-	padding: 10px;
+	padding: 10px 0 10px 0;
 	min-height: 800px;
 	// background-color: #45484B;
-	padding-left: 0;
+
 }
 
 //episodes//
@@ -126,8 +126,9 @@ footer{
 .episode_name {
 	border-bottom: 3px solid #bdc3c7;
 	font-size: 1.4em;
-	padding-left: 4%;
-	margin-top: 20px;
+	padding-left: 4px;
+	// margin-top: 20px;
+	margin: 20px 4% 0 4%;
 	padding-bottom: 2.5px;
 }
 
@@ -399,13 +400,14 @@ footer{
 /*-------post season report--------*/
 
 .post_season{
-	display: inline-block;
-	margin: 20px 2%;
-	width: 96%;
+
+	display: block;
+	margin: 20px  6%;	
 	border-top: 2px solid $silver;
 	padding: 0 3% 20px 3%;
 	h2{
 		display: block;
+		text-align: center;
 		color: $cloud;
 		margin-top: 0;
 		border-bottom: 2px solid $silver;
@@ -420,6 +422,10 @@ footer{
 	i{
 		margin-top: 10px; 
 	}
+}
+
+.infograph, .report {
+	padding: 0 1% 0 1%;
 }
 
 .minor{
