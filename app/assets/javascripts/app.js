@@ -312,7 +312,7 @@ $("#up").click(function(){
   }
   else{
     $('html, body').animate({
-      scrollTop: $("#desc").children(".season5").offset().top()
+      scrollTop: $("#desc").children(".season5").offset().top
     }, 500);
   }
 

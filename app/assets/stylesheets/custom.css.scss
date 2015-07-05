@@ -465,7 +465,9 @@ footer{
 
 /*-------contact---------*/
 #contact{
+	font-family: 'Open Sans', sans-serif;
 	text-align: center;
+	margin-bottom: 60px;
 	h1{
 		margin-top: 80px;
 		font-size: 3em;
@@ -489,8 +491,13 @@ footer{
 }
 
 /*--------about----------*/
+
+#about{
+	font-family: 'Open Sans', sans-serif;
+}
 #rails_div{
 	display: block;
+
 }
 
 #rails_logo{
@@ -499,6 +506,8 @@ footer{
 	margin-top: 80px;
 	width: 60px;
 	margin-right: 10px;
+	margin-bottom: 10px;
+
 }
 
 #fan{
