@@ -7,6 +7,7 @@
 // var s_4_height = $(".season4").outerHeight() + 14;
 // var s_5_height = $(".season5").outerHeight() + 14;
 
+var spoiler_h = $("#spoiler").height() - 52;
 var s_1_height = $("#asc").children(".season1").outerHeight();
 var s_2_height = $("#asc").children(".season2").outerHeight();
 var s_3_height = $("#asc").children(".season3").outerHeight();
@@ -19,6 +20,73 @@ console.log(s_2_height);
 console.log(s_3_height);
 console.log(s_4_height);
 console.log(s_5_height);
+console.log(spoiler_h);
+console.log($(window).scrollTop());
+
+function check_dot() {
+  var scroll = $(window).scrollTop();
+  if (scroll < spoiler_h){
+
+    $(".dis").css("background-color", "#bdc3c7");
+    $(".one").css("background-color", "transparent");
+    $(".two").css("background-color", "transparent");
+    $(".three").css("background-color", "transparent");
+    $(".four").css("background-color", "transparent");
+    $(".five").css("background-color", "transparent");
+  }
+  if (scroll >= spoiler_h && (scroll < s_1_height + spoiler_h) ){
+
+    $(".dis").css("background-color", "transparent");
+    $(".one").css("background-color", "#bdc3c7");
+    $(".two").css("background-color", "transparent");
+    $(".three").css("background-color", "transparent");
+    $(".four").css("background-color", "transparent");
+    $(".five").css("background-color", "transparent");
+  }
+  else if (scroll >= s_1_height + spoiler_h && scroll < s_1_height + s_2_height + spoiler_h){
+
+    $(".dis").css("background-color", "transparent");
+    $(".one").css("background-color", "transparent");
+    $(".two").css("background-color", "#bdc3c7");
+    $(".three").css("background-color", "transparent");
+    $(".four").css("background-color", "transparent");
+    $(".five").css("background-color", "transparent");
+
+  }
+  else if (scroll >= s_1_height + s_2_height + spoiler_h && scroll < s_1_height + s_2_height + s_3_height + spoiler_h){
+
+    $(".dis").css("background-color", "transparent");
+    $(".one").css("background-color", "transparent");
+    $(".two").css("background-color", "transparent");
+    $(".three").css("background-color", "#bdc3c7");
+    $(".four").css("background-color", "transparent");
+    $(".five").css("background-color", "transparent");
+
+  }
+  else if (scroll >= s_1_height + s_2_height + s_3_height + spoiler_h && scroll < s_1_height + s_2_height + s_3_height + s_4_height + spoiler_h){
+
+    $(".dis").css("background-color", "transparent");
+    $(".one").css("background-color", "transparent");
+    $(".two").css("background-color", "transparent");
+    $(".three").css("background-color", "transparent");
+    $(".four").css("background-color", "#bdc3c7");
+    $(".five").css("background-color", "transparent");
+
+  }
+  else if (scroll >= s_1_height + s_2_height + s_3_height  + s_4_height + spoiler_h){
+
+    $(".dis").css("background-color", "transparent");
+    $(".one").css("background-color", "transparent");
+    $(".two").css("background-color", "transparent");
+    $(".three").css("background-color", "transparent");
+    $(".four").css("background-color", "transparent");
+    $(".five").css("background-color", "#bdc3c7");
+  }
+}
+
+check_dot();
+
+
 
 $( window ).resize(function() {
   if (a_or_d == true){
@@ -27,13 +95,16 @@ $( window ).resize(function() {
     s_3_height = $("#asc").children(".season3").outerHeight();
     s_4_height = $("#asc").children(".season4").outerHeight();
     s_5_height = $("#asc").children(".season5").outerHeight();
+    var spoiler_h = $("#spoiler").outerHeight() - 52;
   }else{
     s_1_height = $("#desc").children(".season5").outerHeight();
     s_2_height = $("#desc").children(".season4").outerHeight();
     s_3_height = $("#desc").children(".season3").outerHeight();
     s_4_height = $("#desc").children(".season2").outerHeight();
     s_5_height = $("#desc").children(".season1").outerHeight();
+    var spoiler_h = $("#spoiler").outerHeight() - 52;
   }
+  check_dot();
 });
 
 $(".state2").hide();
@@ -153,71 +224,98 @@ $(".direction_toggle").click(function(event){
 
 
 
-$(window).scroll(function(event) {
-    var scroll = $(window).scrollTop();
-    if (scroll < s_1_height){
-
-      $(".one").css("background-color", "#bdc3c7");
-      $(".two").css("background-color", "transparent");
-      $(".three").css("background-color", "transparent");
-      $(".four").css("background-color", "transparent");
-      $(".five").css("background-color", "transparent");
-    }
-    else if (scroll >= s_1_height && scroll < s_1_height + s_2_height){
-      $(".one").css("background-color", "transparent");
-      $(".two").css("background-color", "#bdc3c7");
-      $(".three").css("background-color", "transparent");
-      $(".four").css("background-color", "transparent");
-      $(".five").css("background-color", "transparent");
-
-    }
-    else if (scroll >= s_1_height + s_2_height && scroll < s_1_height + s_2_height + s_3_height){
-      $(".one").css("background-color", "transparent");
-      $(".two").css("background-color", "transparent");
-      $(".three").css("background-color", "#bdc3c7");
-      $(".four").css("background-color", "transparent");
-      $(".five").css("background-color", "transparent");
-
-    }
-    else if (scroll >= s_1_height + s_2_height + s_3_height && scroll < s_1_height + s_2_height + s_3_height + s_4_height){
-      $(".one").css("background-color", "transparent");
-      $(".two").css("background-color", "transparent");
-      $(".three").css("background-color", "transparent");
-      $(".four").css("background-color", "#bdc3c7");
-      $(".five").css("background-color", "transparent");
-
-    }
-    else{
-      $(".one").css("background-color", "transparent");
-      $(".two").css("background-color", "transparent");
-      $(".three").css("background-color", "transparent");
-      $(".four").css("background-color", "transparent");
-      $(".five").css("background-color", "#bdc3c7");
-    }
+$(window).scroll( function(){
+  check_dot();
 });
 
+$(".dis").click(function() {
+
+  $('html, body').animate({
+    scrollTop: $("#spoiler").offset().top
+  }, 500);
+
+});
 
 $(".one").click(function() {
-  window.scrollTo(0, 0);
+  if (a_or_d == true){
+    $('html, body').animate({
+      scrollTop: $("#asc").children(".season1").offset().top
+    }, 500);
+  }
+  else{
+    $('html, body').animate({
+      scrollTop: $("#desc").children(".season5").offset().top
+    }, 500);
+  }
 });
+
 $(".two").click(function() {
-  window.scrollTo(0, s_1_height);
-  console.log(s_1_height);
+ 
+  if (a_or_d == true){
+    $('html, body').animate({
+      scrollTop: $("#asc").children(".season2").offset().top
+    }, 500);
+  }
+  else{
+    $('html, body').animate({
+      scrollTop: $("#desc").children(".season4").offset().top
+    }, 500);
+  }
+
 });
+
 $(".three").click(function() {
-  window.scrollTo(0, s_1_height + s_2_height);
+  if (a_or_d == true){
+    $('html, body').animate({
+      scrollTop: $("#asc").children(".season3").offset().top
+    }, 500);
+  }
+  else{
+    $('html, body').animate({
+      scrollTop: $("#desc").children(".season3").offset().top
+    }, 500);
+  }
 });
+
 $(".four").click(function() {
-  window.scrollTo(0, s_1_height + s_2_height + s_3_height );
+  if (a_or_d == true){
+    $('html, body').animate({
+      scrollTop: $("#asc").children(".season4").offset().top
+    }, 500);
+  }
+  else{
+    $('html, body').animate({
+      scrollTop: $("#desc").children(".season2").offset().top
+    }, 500);
+  }
 });
+
 $(".five").click(function() {
-  window.scrollTo(0, s_1_height + s_2_height + s_3_height + s_4_height );
+  if (a_or_d == true){
+    $('html, body').animate({
+      scrollTop: $("#asc").children(".season5").offset().top
+    }, 500);
+  }
+  else{
+    $('html, body').animate({
+      scrollTop: $("#desc").children(".season1").offset().top
+    }, 500);
+  }
 });
 
 $("#up").click(function(){
-  $("#spoiler").slideToggle(200);
+
+  if (a_or_d == true){
+    $('html, body').animate({
+      scrollTop: $("#asc").children(".season1").offset().top
+    }, 500);
+  }
+  else{
+    $('html, body').animate({
+      scrollTop: $("#desc").children(".season5").offset().top()
+    }, 500);
+  }
+
 });
-$("#the_x").click(function(){
-  $("#spoiler").slideToggle(200);
-});
+
 

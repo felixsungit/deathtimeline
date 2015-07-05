@@ -58,7 +58,7 @@ $darkgray: #1c1d1e;
 	}
 	.circle{
 		&:hover{
-			width: 13px;
+			width: 11px;
 			border-radius: 7px;
 
 		}
@@ -67,6 +67,7 @@ $darkgray: #1c1d1e;
 
 		}
 	}
+	
 
 
 }
@@ -164,6 +165,10 @@ $darkgray: #1c1d1e;
 			border-radius: 10px;
 
 		}
+	}
+	.dis{
+		width: 14px;
+		height: 24px;
 	}
 
 }
