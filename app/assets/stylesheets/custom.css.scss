@@ -71,9 +71,15 @@ li a {
 	border-bottom: 2px solid $darkgray;
 }
 
-#d_brand{
-	color: black;
+#d_brand_small{
+	color: $darkgray;
 	font-size: 1.8em;
+}
+#d_brand{
+	display: none;
+}
+#d_brand_medium{
+		display: none;
 }
 
 .navbar-header .navbar-toggle:hover .icon-bar {

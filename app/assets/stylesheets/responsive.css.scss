@@ -10,6 +10,14 @@ $darkgray: #1c1d1e;
 	.see{
 		width: 100%;
 	}
+	#d_brand_medium{
+		display: inline-block;
+		color: $darkgray;
+		font-size: 1.8em;
+	}
+	#d_brand_small{
+		display: none;
+	}
 	/*-------death-------*/
 	.time{
 		width: 60px;
@@ -111,7 +119,14 @@ $darkgray: #1c1d1e;
 	.see{
 		width: 100%;
 	}
-
+	#d_brand{
+		display: inline-block;
+		color: $darkgray;
+		font-size: 1.8em;
+	}
+	#d_brand_medium{
+		display: none;
+	}
 	/*-------death-------*/
 	.show_death{
 		width: 90%;
