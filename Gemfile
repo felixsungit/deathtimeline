@@ -13,9 +13,12 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'mail_form'
 gem 'simple_form'
 gem "font-awesome-rails"
+gem 'mysqltopostgres', git: "https://github.com/maxlapshin/mysql2postgres.git"
+gem 'pg'
 
 
 group :development, :test do
+	
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
@@ -23,7 +26,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg',             '0.17.1'
+	
   gem 'rails_12factor', '0.0.2'
 end
 

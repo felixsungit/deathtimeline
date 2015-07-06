@@ -13,37 +13,40 @@
 
 ActiveRecord::Schema.define(version: 20150628200524) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "deaths", force: :cascade do |t|
-    t.string   "name",           limit: 255
-    t.string   "time",           limit: 255
-    t.integer  "got_episode_id", limit: 4
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.string   "link",           limit: 255
-    t.string   "killed_by",      limit: 255
-    t.integer  "importance",     limit: 4
-    t.string   "imdb",           limit: 255
-    t.string   "wiki",           limit: 255
-    t.string   "gender",         limit: 255
-    t.string   "house",          limit: 255
+    t.string   "name"
+    t.string   "time"
+    t.integer  "got_episode_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "link"
+    t.string   "killed_by"
+    t.integer  "importance"
+    t.string   "imdb"
+    t.string   "wiki"
+    t.string   "gender"
+    t.string   "house"
   end
 
   create_table "got_episodes", force: :cascade do |t|
-    t.integer  "number",        limit: 4
-    t.integer  "got_season_id", limit: 4
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.string   "name",          limit: 255
-    t.string   "wikia",         limit: 255
-    t.string   "imdb",          limit: 255
-    t.string   "wiki",          limit: 255
+    t.integer  "number"
+    t.integer  "got_season_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "name"
+    t.string   "wikia"
+    t.string   "imdb"
+    t.string   "wiki"
   end
 
   create_table "got_seasons", force: :cascade do |t|
-    t.integer  "number",     limit: 4
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.string   "name",       limit: 255
+    t.integer  "number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "name"
   end
 
 end
