@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150628200524) do
+ActiveRecord::Schema.define(version: 20150707023939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20150628200524) do
     t.string   "wiki"
     t.string   "gender"
     t.string   "house"
+    t.string   "status"
   end
 
   create_table "got_episodes", force: :cascade do |t|

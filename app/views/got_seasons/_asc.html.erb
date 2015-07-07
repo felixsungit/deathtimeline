@@ -37,6 +37,9 @@
 													<div class="show_death">
 														<div class="name">
 															<%= death.name %>
+															<% if death.status != nil %>
+																<%= death.status %>
+															<% end %>
 														</div>
 
 														
